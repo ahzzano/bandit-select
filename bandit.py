@@ -33,7 +33,7 @@ class OVBandit:
 
 		self.solver.update(inf_time) 
 
-		return output
+		return inf_time, output
 
 	def reset(self):
 		self.runs = 0
