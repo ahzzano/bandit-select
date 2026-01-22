@@ -24,13 +24,13 @@ class OVBandit:
 		output = self.models[model](input)
 		e = datetime.now()
 
-		return (e-s).total_seconds() * 1e6,  output
+		return (e-s).total_seconds() * 1000,  output
 
 	def predict(self, input):
 		self.runs += 1
 		# selected = self.solver.tick()
 		inf_time, output = self._infer(self.selected_model, input)
-
+		
 		self.solver.update(inf_time) 
 
 		return inf_time, output

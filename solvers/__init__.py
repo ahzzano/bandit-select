@@ -4,3 +4,4 @@ from solvers.ucb import UpperConfidenceBound
 from solvers.thompson import ThompsonSampling
 from solvers.ExploreOnly import ExploreOnly
 from solvers.exploit_only import ExploitOnly
+from solvers.roundrobin import RoundRobin
